@@ -23,7 +23,7 @@ p, a , label{
     flex-direction: row;
     align-items: center;
     padding: 5px 5px 5px 5px;
-    background-color: rgb(194, 44, 44);
+    background-color: rgb(32, 32, 32);
     width: 100%;
     min-height: 10vh;
 }
@@ -39,12 +39,12 @@ p, a , label{
     align-items: center;
     width: 50%;
     min-width: 315.5px;
-    gap: 10px;
+    gap: 5px;
 }
 
 .h-div1 img {
     padding: 5px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 .h-div1 h2 {
@@ -78,14 +78,15 @@ p, a , label{
 }
 
 .header nav ul li a:hover {
-    color: rgb(148, 18, 18)
+    color: rgb(241, 113, 8);
 }
 
 /* -------------- MAIN -------------- */
 .main {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/wallpaper-hisoka.jpg");
+    background-color: #000000;
+    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/wallpaper-konoha.jpeg");
     background-size: cover;
-    background-position: center;
+    background-position: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +100,9 @@ p, a , label{
 
 
 .hisoka {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/wallpaper-kkx.jpg");
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -124,7 +128,7 @@ p, a , label{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     width: 50%;
 }
 
@@ -136,18 +140,21 @@ p, a , label{
 
 .hisoka-text h2 {
     font-family: 'Alata', sans-serif;
-    font-size: 5.7rem;
-    color: rgb(194, 44, 44);
+    font-size: 7.2rem;
+    background-image: linear-gradient(45deg, rgb(221, 58, 8), rgb(241, 159, 8));
+    -webkit-background-clip: text;
+    color: transparent;
     font-weight: bold;
-    margin-top: -30px;
+    margin-top: -50px;
+    margin-bottom: -20px;
 }
 
 .hisoka-text button {
     background-color: white;
-    color: rgb(194, 44, 44);
+    color: rgb(241, 113, 8);
     border: none;
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 10px 30px;
     font-size: 1.55rem;
     font-weight: bold;
     cursor: pointer;
@@ -163,6 +170,7 @@ p, a , label{
     font-family: 'Alata', sans-serif;
     font-size: 2rem;
     color:white;
+    padding: 25px 0 20px 0;
     
 }
 
@@ -192,13 +200,13 @@ p, a , label{
     background-size: cover;
     /* width: auto; */
     width: 150px;
+    height: 150px;
     max-height: 200px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 3px solid white;
 }
 
 .card {
-    /* border: 2px solid rgb(0, 0, 0); */
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -220,7 +228,8 @@ p, a , label{
 .card:hover {
     box-shadow: -1px 5px 13px 0px rgba(0, 0, 0, 0.75);
     transform: scale(1.05);
-    background-color: rgb(194, 44, 44);
+    /* background-color: rgb(241, 113, 8); */
+    background: linear-gradient(to left, rgb(241, 113, 8), rgb(233, 32, 6));
 
     .card-title{
         color: white;
@@ -230,7 +239,7 @@ p, a , label{
     }
     .card-botao{
         background-color: white;
-        color: rgb(194, 44, 44);
+        color: rgb(241, 113, 8);
     }
     .card-botao:hover{
         background-color: rgb(196, 196, 196);
@@ -255,7 +264,7 @@ p, a , label{
 }
 
 .card-botao{
-    background-color: rgb(194, 44, 44);
+    background-color: rgb(241, 93, 8);
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -361,7 +370,7 @@ p, a , label{
 }
 
 .input input:focus {
-    border: 2px solid rgb(255, 83, 83) !important;
+    border: 2px solid rgb(255, 120, 57) !important;
 }
 
 .input input::placeholder {
@@ -373,7 +382,7 @@ p, a , label{
 
 .input button {
     padding: 7.6px 14px 7.6px 10px;
-    background-color: brown;
+    background-color: rgb(241, 74, 8);
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     border: none;
@@ -383,7 +392,7 @@ p, a , label{
 }
 
 .input button:hover {
-    background-color: rgb(201, 53, 53);
+    background-color: rgb(252, 99, 39);
 }
 
 .div2-3 p {
