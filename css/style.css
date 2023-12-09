@@ -1,0 +1,704 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Text&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+h2 {
+    font-family: 'Ysabeau SC', sans-serif;
+}
+
+p, a , label{
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+/* -------------- HEADER -------------- */
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 5px 5px 5px;
+    background-color: rgb(194, 44, 44);
+    width: 100%;
+    min-height: 10vh;
+}
+
+.menu ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.h-div1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+    min-width: 315.5px;
+    gap: 10px;
+}
+
+.h-div1 img {
+    padding: 5px;
+    background-color: white;
+}
+
+.h-div1 h2 {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.h-div2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    width: 50%;
+    min-width: 219.17px;
+}
+
+.header div img {
+    width: 60px;
+}
+
+.header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.header nav ul {
+    list-style-type: none;
+}
+
+.header nav ul li a:hover {
+    color: rgb(148, 18, 18)
+}
+
+/* -------------- MAIN -------------- */
+.main {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/wallpaper-hisoka.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    /* padding: 3rem 0; */
+    padding: 0 0 3rem 0;
+    
+}
+
+
+
+.hisoka {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* min-height: 300px; */
+    padding-top: 40px;
+}
+
+.hisoka-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.hisoka-img img {
+    width: 550px;
+}
+
+.hisoka-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.hisoka-text h1 {
+    font-family: 'Alata', sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+.hisoka-text h2 {
+    font-family: 'Alata', sans-serif;
+    font-size: 5.7rem;
+    color: rgb(194, 44, 44);
+    font-weight: bold;
+    margin-top: -30px;
+}
+
+.hisoka-text button {
+    background-color: white;
+    color: rgb(194, 44, 44);
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1.55rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.hisoka-text button:hover {
+    transform: scale(1.05);
+    background-color: rgb(194, 194, 194);
+}
+
+.hunter h2 {
+    font-family: 'Alata', sans-serif;
+    font-size: 2rem;
+    color:white;
+    
+}
+
+.main h3 {
+    font-family: 'Alata', sans-serif;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.container-hunters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card-img {
+    background-position: center;
+    background-size: cover;
+    /* width: auto; */
+    width: 150px;
+    max-height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.card {
+    /* border: 2px solid rgb(0, 0, 0); */
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 30%;
+    width: auto;
+    max-width: 400px;
+    padding: 0.8rem;
+    max-height: 400px;
+    cursor: pointer;
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    background-color: rgb(255, 255, 255);
+}
+
+.card:hover {
+    box-shadow: -1px 5px 13px 0px rgba(0, 0, 0, 0.75);
+    transform: scale(1.05);
+    background-color: rgb(194, 44, 44);
+
+    .card-title{
+        color: white;
+    }
+    .card-profession{
+        color: white;
+    }
+    .card-botao{
+        background-color: white;
+        color: rgb(194, 44, 44);
+    }
+    .card-botao:hover{
+        background-color: rgb(196, 196, 196);
+    }
+}
+
+.card-title {
+    font-family: 'Ysabeau SC', sans-serif;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+}
+
+.card-profession {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    white-space: pre-line;
+}
+
+.card-botao{
+    background-color: rgb(194, 44, 44);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 5px 45px 5px 45px;
+}
+
+/* .card-botao:hover{
+    background-color: rgb(250, 44, 44);
+} */
+
+/* -------------- FOOTER -------------- */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(43, 43, 43);
+}
+
+.footer1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    width: 100%;
+    gap: 20px;
+}
+
+.div1 {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: left;
+    width: 40%;
+    min-width: 304px;
+}
+
+.div1 p {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.div2 {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: end;
+    gap: 40px;
+    min-width: 304px;
+}
+
+.div2 h2 {
+    color: white;
+}
+
+.div2-1, .div2-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.div2-3 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 351px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links ul {
+    list-style-type: none;
+}
+
+.links a {
+    text-decoration: none;
+    color: rgb(136, 136, 136);
+    font-size: 0.8rem;
+}
+
+.links a:hover {
+    color: white;
+}
+
+.input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.input input {
+    padding: 5px 10px 5px 5px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+.input input:focus {
+    border: 2px solid rgb(255, 83, 83) !important;
+}
+
+.input input::placeholder {
+    color: grey;
+    font-style: italic;
+    font-size: 0.8rem;
+    padding-left: 8px;
+}
+
+.input button {
+    padding: 7.6px 14px 7.6px 10px;
+    background-color: brown;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.input button:hover {
+    background-color: rgb(201, 53, 53);
+}
+
+.div2-3 p {
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.footer div img {
+    width: 200px;
+}
+
+hr {
+    margin: 15px 0 15px 0;
+    width: 98%;
+    border-color: rgb(77, 77, 77);
+}
+
+.footer2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer2 a img {
+    width: 40px;
+    padding-bottom: 15px;
+}
+
+#mensagemParaUsuario {
+    color: red;
+}
+
+@media (max-width: 768px) {
+    * {
+        font-size: 22px;
+    }
+
+    .hisoka-img{
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .header{
+        padding: 2rem;
+        align-items:center;
+        justify-content: space-between;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .h-div1{
+        width: 100%;
+        align-items: center;
+        justify-content: start;
+    }
+
+    .h-div1 h2{
+        font-size: 100%;
+    }
+
+    .header div img {
+        width: 125px;
+    }
+
+    .h-div2{
+        align-items: end;
+        justify-content: end;
+        flex-direction: column;
+        text-align: end;
+        width: fit-content;
+        min-width: fit-content;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .footer1{
+        flex-direction: column;
+    }
+
+    .div1{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .div2{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .div2-1, .div2-2, .div2-3{
+        text-align: center;
+    }
+
+    .input{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .input input{
+        width: 8rem;
+    }
+
+    /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
+    .menu {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform-origin: top;
+        transform: scaleY(0);
+
+    }
+
+    .menu.active {
+        display: block;
+        opacity: 1;
+        transform: scaleY(1);
+        
+      }
+      
+    .menu-toggler {
+        display: flex;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 10px;
+        padding: 8px 11px 8px 11px;
+        border-radius: 5px;
+    }
+
+      
+    .hamburguer {
+        
+        width: 40px;
+        height: 3px;
+        background-color: white;
+    }
+
+    .hamburguer  img{
+        width: auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    * {
+        font-size: 20px;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    .footer1{
+        align-items: start;
+    }
+
+    .div2{
+        flex-direction: column;
+    }
+
+    .card {
+        width: 40%;
+    }
+}
+
+/* --------------- FORMULÁRIO ----------------*/
+
+.secao-form {
+    background-color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.form-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.form-img img {
+    width: 495px;
+}
+
+.form-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 50px 30px 50px;
+    border-radius: 10px;
+
+}
+
+.formulario h2 {
+    font-family: 'Wix Madefor Text', sans-serif;
+    font-size: 1.5rem;
+    color: brown;
+    font-weight: bold;
+}
+
+.formulario input {
+    width: 450px;
+    border-radius: 5px;
+    border: 1px solid rgb(177, 177, 177);
+    padding: 5px;
+    outline: none;
+}
+
+.formulario input:focus {
+    border: 2px solid rgb(255, 83, 83)!important;
+}
+
+.formulario input::placeholder {
+    color: grey;
+    font-style: italic;
+    font-size: 0.8rem;
+    padding-left: 4px;
+
+    
+}
+
+#descricao[type="text"]::placeholder {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+
+}
+
+.formulario p {
+    font-size: 0.8rem;
+    color: rgb(56, 56, 56);
+}
+
+.formulario-dados {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulario-radios {
+    display: flex;
+    flex-direction: row;  
+    gap: 10px;  
+}
+
+.opcao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;   
+}
+
+.opcao input {
+    width: 30px;
+}
+
+.opcao label {
+    font-size: 0.8rem;
+    color: rgb(56, 56, 56);
+    
+}
+
+#descricao {
+    width: 450px;
+    height: 100px;
+    overflow-wrap: break-word ;
+}
+
+.concordo {
+    display: flex;
+    flex-direction: row;
+}
+
+.concordo input {
+    width: 30px;
+}
+
+.concordo label {
+    font-size: 0.8rem;
+    color: rgb(56, 56, 56);
+}
+
+#submit {
+    background-color: brown;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 5px;
+}
+
+#submit:hover {
+    background-color: rgb(201, 53, 53);
+}

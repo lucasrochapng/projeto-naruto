@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro de Hunter</title>
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" type="image/png" href="./img/hxh-l.png">
+
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="h-div1">
+                <img src="./img/logo-hunter.png" alt="logo dos hunters">
+                <h2>HUNTER ASSOCIATION</h2>
+            </div>
+
+            <div class="h-div2">
+                <div class="menu-toggler">
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="">HUNTERS</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
+
+        <main class="secao-form">
+
+            <div class="form-img">
+                <img src="./img/hisoka-form.png" alt="">
+            </div>
+
+            <div class="form-text">
+
+                <form class="formulario" action="https://formsubmit.co/lucasrochadss@gmail.com" method="post">
+
+                    <h2>CONTRATO HUNTER</h2>
+
+                    <div class="formulario-dados">
+
+                        <div>
+                            <p>Nome</p>
+                            <input type="text" placeholder="Digite o nome do Hunter" id="nome">
+                        </div>
+
+                        <div>
+                            <p>Recompensa</p>
+                            <input type="text" placeholder="Digite a recompensa" id="recompensa">
+                        </div>
+                        
+                    </div>
+                
+                    <div class="formulario-radios">
+
+                        <div class="opcao">
+                            <input type="radio" name="servico" id="servico1" value="Caça">
+                            <label for="servico1">Caça</label>
+                        </div>
+
+                        <div class="opcao">
+                            <input type="radio" name="servico" id="servico2" value="Busca">
+                            <label for="servico2">Busca</label>
+                        </div>
+
+                        <div class="opcao ">
+                            <input type="radio" name="servico" id="servico3" value="Exploração">
+                            <label for="servico3">Exploração</label>
+                        </div>
+
+                    </div>
+
+                    <div class="formulario-dados">
+                        <div>
+                            <p>Descrição</p>
+                            <textarea name="descricao" id="descricao" placeholder="Digite a descrição do serviço"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="concordo">
+                        <input type="checkbox">
+                        <label for="">Concordo com as diretrizes da Associação Hunter.</label>
+                    </div>                                   
+                    
+                    <input type="submit" id="submit" value="CONFIRMAR CONTRATO">
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- <h1>Criar Personagem</h1>
+        <form id="characterForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="professions">Profissões:</label>
+            <input type="text" id="professions" name="professions" required>
+
+            <button type="submit">Criar Personagem</button>
+        </form> -->
+
+        <script src="formulario.js"></script>
+    </body>
+</html>
