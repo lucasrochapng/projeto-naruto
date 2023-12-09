@@ -1,71 +1,55 @@
 const container = document.getElementById("container");
-
 let characters = [];
 
 const getAllCharacters = async () => {
     try {
-        const response = await fetch("https://your-character-api-endpoint.com/characters");
-        characters = await response.json();
+        const response = await fetch("https://dattebayo-api.onrender.com/characters");
+        const data = await response.json();
+        characters = data.characters;
     } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Erro ao buscar os dados:", error);
         characters = [];
     }
 };
 
+const getRandomCharacters = (count) => {
+    const shuffledCharacters = characters.sort(() => Math.random() - 0.5);
+    return shuffledCharacters.slice(0, count);
+};
+
 const criarCards = () => {
-    characters.forEach((character) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.innerHTML = `
-            <img class="card-img" src="${character.img}" alt="${character.name}" />
-            <h2 class="card-title">${character.name}</h2>
-            <p class="card-profession">${character.professions.join("\n")}</p>
-            <a class="card-botao"> CONTRATAR </a>
-        `;
-        container.appendChild(card);
-    });
-};
+    container.innerHTML = ""; // Limpar cartões anteriores
+    const randomCharacters = getRandomCharacters(10);
 
-const deleteCharacterLocally = (characterId) => {
-    characters = characters.filter((character) => character._id !== characterId);
-    container.innerHTML = "";
-    criarCards();
-};
+    if (randomCharacters.length > 0) {
+        for (const character of randomCharacters) {
+            const card = document.createElement("div");
+            card.classList.add("card");
 
-const createCharacterLocally = () => {
-    const newCharacter = {
-        _id: Date.now(),
-        name: "New Character",
-        img: "url_da_imagem",
-        professions: ["New Profession"],
-    };
+            const rankPartI = character.rank.ninjaRank["Part I"];
 
-    characters.push(newCharacter);
-    criarCards();
-};
-
-const criarCardExemplo = () => {
-    const exemploCharacter = {
-        id: 1,
-        img: "../img/manny.png",
-        name: "Name",
-        professions: ["Profissão 1", "Profissão 2"],
-    };
-
-    let i = 0;
-    while (i < 5) {
-        const newCharacterCopy = { ...exemploCharacter, _id: Date.now() + i };
-        characters.push(newCharacterCopy);
-        i++;
+            card.innerHTML = `
+                <div>
+                    <img class="card-img" src="${character.images[0]}" alt="${character.name}" />
+                </div>
+                <div class="card-text">
+                    <h2 class="card-title">${character.name}</h2>
+                    <p class="card-rank">${rankPartI}</p>
+                </div>
+                <a class="card-botao"> CONTRATAR </a>
+            `;
+            container.appendChild(card);
+        }
+    } else {
+        container.innerHTML = "<p style='color: white'>Nenhum personagem disponível.</p>";
     }
-    criarCards();
 };
+
+
 
 window.addEventListener("load", async () => {
-    //await getAllCharacters();
-    //criarCards();
-
-    criarCardExemplo();
+    await getAllCharacters(); // Aguardar a busca dos personagens
+    criarCards();
 
     let cards = document.querySelectorAll(".card");
     cards.forEach((elemento) => {
@@ -80,7 +64,6 @@ window.addEventListener("load", async () => {
         elemento.lastElementChild.addEventListener("click", (event) => {
             window.location.href = "./formulario.html";
         });
-
     });
 });
 
