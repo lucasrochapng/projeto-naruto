@@ -48,7 +48,7 @@ p, a , label{
     left: 0;
     width: 100%;
     height: 2px; /* Adjust the height of the border as needed */
-    background-color: var(--cor-gradiente-header);
+    background-image: var(--cor-gradiente-header);
 }
 
 
@@ -458,70 +458,54 @@ hr {
     color: red;
 }
 
-@media (max-width: 500px) {
-
+@media (max-width: 500px), (min-width: 500px) and (max-width: 768px) {
     * {
         font-size: 22px;
     }
 
-    .h-div1 h2{
-        height: 0;
-        width: 0;
-        visibility: hidden;
-    }
-
-    .hisoka{
+    .hisoka {
         padding-bottom: 3rem;
     }
 
-    .hisoka-text{
-        height: fit-content;
+    .hisoka-text {
         text-align: center;
     }
 
-    .hisoka-text div{
-        width: 100%;
-    }
-
-    .hisoka-text div h1, .hisoka-text div h2{
-        font-size: 100%;
-    }
-
-    .hisoka-text button{
+    .hisoka-text button {
         margin-top: 3rem;
     }
 
-    .hunter{
+    .hunter {
         padding: 0 15px;
     }
 
-    .hisoka-img{
+    .hisoka-img {
         visibility: hidden;
         width: 0;
         height: 0;
     }
 
-    h2{
+    h2 {
         font-size: 2rem;
     }
 
-    .header{
+    .header {
         padding: 2rem;
-        align-items:center;
+        align-items: center;
         justify-content: space-between;
     }
 
-    .menu ul{
+    .menu ul {
         flex-direction: column;
     }
 
-    .h-div1{
+    .h-div1 {
         align-items: center;
         justify-content: start;
         min-width: 0;
     }
 
-    .h-div1 h2{
+    .h-div1 h2 {
         font-size: 100%;
     }
 
@@ -529,7 +513,7 @@ hr {
         width: 125px;
     }
 
-    .h-div2{
+    .h-div2 {
         align-items: end;
         justify-content: end;
         flex-direction: column;
@@ -538,45 +522,32 @@ hr {
         min-width: fit-content;
     }
 
-    .footer1{
+    .footer1 {
         flex-direction: column;
     }
 
-    .div1{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    .div1,
+    .div2,
+    .div2-1,
+    .div2-2,
+    .div2-3 {
         text-align: center;
         width: 100%;
-    }
-    
-    .div2{
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
-    .div2-1, .div2-2, .div2-3{
-        text-align: center;
-        width: 100%;
-    }
-
-    .div2-3 input{
-        width: 100%;
-    }
-
-    .input{
+    .input {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-direction: row;
     }
 
-    .input input{
+    .input input {
         width: 8rem;
     }
-
-    /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 
     .menu {
         display: none;
@@ -614,56 +585,87 @@ hr {
     .hamburguer  img{
         width: auto;
     }
-
 }
 
-@media (min-width: 500px) and (max-width: 768px){
-    * {
-        font-size: 22px;
+@media (max-width: 500px) {
+
+    *{
+        font-size: 18px;
     }
 
-    .hisoka{
+    .h-div1 h2 {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    .hisoka {
         padding-bottom: 3rem;
     }
 
-    .hisoka-text{
+    .hisoka-text {
+        height: fit-content;
         text-align: center;
+        width: 270px;
+        height: auto;
     }
 
-    .hisoka-text button{
+    .hisoka-text div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .hisoka-text h2 {
+        font-size: 4.3rem;
+        margin: 0;
+        font-weight: bold;
+    }
+    
+    .hisoka-text h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .hisoka-text button {
         margin-top: 3rem;
+        width: 270px;
     }
 
-    .hunter{
+    .hunter {
         padding: 0 15px;
     }
 
-    .hisoka-img{
+    .hisoka-img {
         visibility: hidden;
         width: 0;
         height: 0;
     }
 
-    h2{
+    h2 {
         font-size: 2rem;
     }
 
-    .header{
+    .header {
         padding: 2rem;
-        align-items:center;
+        align-items: center;
         justify-content: space-between;
     }
 
-    .menu ul{
+    .menu ul {
         flex-direction: column;
     }
 
-    .h-div1{
+    .h-div1 {
         align-items: center;
         justify-content: start;
+        min-width: 0;
     }
 
-    .h-div1 h2{
+    .h-div1 h2 {
         font-size: 100%;
     }
 
@@ -671,7 +673,7 @@ hr {
         width: 125px;
     }
 
-    .h-div2{
+    .h-div2 {
         align-items: end;
         justify-content: end;
         flex-direction: column;
@@ -680,41 +682,29 @@ hr {
         min-width: fit-content;
     }
 
-    .footer1{
+    .footer1 {
         flex-direction: column;
     }
 
-    .div1{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-    }
-    
-    .div2{
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .div2-1, .div2-2, .div2-3{
+    .div1,
+    .div2,
+    .div2-1,
+    .div2-2,
+    .div2-3 {
         text-align: center;
         width: 100%;
     }
 
-    .input{
+    .input {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         flex-direction: row;
     }
 
-    .input input{
+    .input input {
         width: 8rem;
     }
-
-    /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
 
     .menu {
         display: none;
@@ -759,19 +749,19 @@ hr {
         font-size: 20px;
     }
 
-    h2{
+    h2 {
         font-size: 2rem;
     }
 
-    .footer1{
+    .footer1 {
         align-items: start;
     }
 
-    .div1{
+    .div1 {
         gap: 20px;
     }
 
-    .div2{
+    .div2 {
         flex-direction: column;
     }
 }
