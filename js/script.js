@@ -26,7 +26,7 @@ const criarCards = () => {
             const card = document.createElement("div");
             card.classList.add("card");
 
-            const rankPartI = character.rank.ninjaRank["Part I"];
+            const rankPartI = character.rank && character.rank.ninjaRank && character.rank.ninjaRank["Part I"] || character.rank && character.rank.ninjaRank && character.rank.ninjaRank["Part II"] || character.rank && character.rank.ninjaRank && character.rank.ninjaRank["Gaiden"];
 
             card.innerHTML = `
                 <div>
@@ -96,7 +96,7 @@ menuToggler.addEventListener('click', function() {
     if (corAtiva) {
         menuToggler.style.backgroundColor = '';
     } else {
-        menuToggler.style.backgroundColor = 'rgb(146, 36, 36)';
+        menuToggler.style.backgroundColor = 'rgba(241,113,8,1)';
     }
     corAtiva = !corAtiva;
 });
