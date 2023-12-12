@@ -59,7 +59,7 @@ formulario.addEventListener("submit", (event) => {
             recompensa : recompensa.value.trim(),
             servico : servico.value,
             descricao : descricao.value.trim(),
-            idHunter : "1",
+            id : "1",
         };
         console.log(adotante);
     } else event.preventDefault();

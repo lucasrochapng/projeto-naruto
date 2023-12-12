@@ -12,16 +12,11 @@ const getAllCharacters = async () => {
     }
 };
 
-const getRandomCharacters = (count) => {
-    const shuffledCharacters = characters.sort(() => Math.random() - 0.5);
-    return shuffledCharacters.slice(0, count);
-};
-
 const criarCards = () => {
-    container.innerHTML = ""; // Limpar cartões anteriores
-    const randomCharacters = getRandomCharacters(10);
+    container.innerHTML = "";
+    const randomCharacters = characters;
 
-    if (randomCharacters.length > 0) {
+    if (characters.length > 0) {
         for (const character of randomCharacters) {
             const card = document.createElement("div");
             card.classList.add("card");
@@ -29,10 +24,13 @@ const criarCards = () => {
             const rankPartI = character.rank && character.rank.ninjaRank && character.rank.ninjaRank["Part I"] || character.rank && character.rank.ninjaRank && character.rank.ninjaRank["Part II"] || character.rank && character.rank.ninjaRank && character.rank.ninjaRank["Gaiden"];
 
             card.innerHTML = `
+                <div class="card-button">
+                    <button onclick="deletarCard(${character.id})">✖</button>
+                </div>
                 <div>
                     <img class="card-img" src="${character.images[0]}" alt="${character.name}" />
                 </div>
-                <div class="card-text">
+                <div class="card-info">
                     <h2 class="card-title">${character.name}</h2>
                     <p class="card-rank">${rankPartI}</p>
                 </div>
@@ -41,14 +39,14 @@ const criarCards = () => {
             container.appendChild(card);
         }
     } else {
-        container.innerHTML = "<p style='color: white'>Nenhum personagem disponível.</p>";
+        container.innerHTML = "<p style='color: white'>Nenhum ninja disponível.</p>";
     }
 };
 
 
 
 window.addEventListener("load", async () => {
-    await getAllCharacters(); // Aguardar a busca dos personagens
+    await getAllCharacters();
     criarCards();
 
     let cards = document.querySelectorAll(".card");
@@ -67,6 +65,11 @@ window.addEventListener("load", async () => {
     });
 });
 
+function deletarCard(characterId) {
+    characters = characters.filter((character) => character.id !== characterId);
+    container.innerHTML = "";
+    criarCards();
+}
 
 //input do footer
 function limparEMostrarMensagem() {
@@ -108,7 +111,3 @@ function scrollDown() {
     window.scrollTo({ top: containerPosition, behavior: "smooth"});
 
 }
-
-
-
-
