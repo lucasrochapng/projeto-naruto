@@ -277,9 +277,17 @@ p, a , label{
     max-height: 400px;
     cursor: pointer;
     transition: box-shadow 0.3s, transform 0.3s;
+    /* transition: height 0.5s, width 0.5s; */
 
     background-color: rgb(255, 255, 255);
 }
+
+/* .card.closed {
+    height: 0;
+  width: 0;
+  padding: 0;
+  overflow: hidden;
+} */
 
 .card:hover {
     box-shadow: -1px 5px 13px 0px rgba(0, 0, 0, 0.75);
@@ -502,6 +510,10 @@ hr {
 }
 
 #mensagemParaUsuario {
+    color: red;
+}
+
+#erroNome, #erroRank {
     color: red;
 }
 
@@ -817,5 +829,21 @@ hr {
 
     .div2 {
         flex-direction: column;
+    }
+
+    
+
+    .div2-1{
+        text-align: center;
+        width: 100%;
+    }
+
+    .div2-2{
+        text-align: center;
+        width: 100%;
+    }
+
+    .div2-3 h2{
+        text-align: center;
     }
 }

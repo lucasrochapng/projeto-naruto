@@ -1,19 +1,3 @@
-// document.getElementById("characterForm").addEventListener("submit", function (event) {
-//     event.preventDefault();
-
-//     const name = document.getElementById("name").value;
-//     const professions = document.getElementById("professions").value.split(",");
-
-//     const newCharacter = {
-//         name,
-//         professions,
-//     };
-
-//     sessionStorage.setItem("newCharacter", JSON.stringify(newCharacter));
-
-//     window.location.href = "index.html";
-// });
-
 let formulario = document.querySelector("form");
 
 formulario.addEventListener("submit", (event) => {
@@ -35,7 +19,7 @@ formulario.addEventListener("submit", (event) => {
 
         if(servico == null) {
             let elementoErro = document.querySelector("#erro-servico");
-            elementoErro.classList.add(".msg-erro--active");
+            elementoErro.classList.add("msg-erro--active");
             control = false;
         }
 
@@ -65,3 +49,11 @@ formulario.addEventListener("submit", (event) => {
     } else event.preventDefault();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var divFormImg = document.querySelector(".form-img");
+    var imagem = divFormImg.querySelector("img");
+
+    if (divFormImg.offsetHeight > divFormImg.clientHeight) {
+        imagem.style.display = "none";
+    }
+});

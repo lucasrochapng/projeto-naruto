@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="./img/logo-folha.png">
+
+    <title>Konohagakure</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+<body>
+    <header class="header" id="header-form">
+        <div class="h-div1">
+            <img src="./img/logo-folha.png" alt="logo de konoha">
+            <h2>KONOHAGAKURE</h2>
+        </div>
+
+        <div class="h-div2">
+            <div class="menu-toggler">
+                <div class="hamburguer"></div>
+                <div class="hamburguer"></div>
+                <div class="hamburguer"></div>
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="cadastroNinja.html">CADASTRAR NINJA</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <main class="secao-form">
+
+        <div class="form-img">
+            <img src="./img/anbu.png" alt="">
+        </div>
+
+        <div class="form-text">
+
+            <form class="formulario" id="formulario" method="post">
+
+                <h2>CADASTRAR NINJA</h2>
+
+                <div class="formulario-dados">
+
+                    <div>
+                        <p>Nome</p>
+                        <input type="text" placeholder="Digite o nome do ninja" id="nome">
+                        <p id="erroNome"></p>
+                    </div>
+
+                    <div>
+                        <p>Rank</p>
+                        <input type="text" placeholder="Digite o rank do ninja" id="rank">
+                        <p id="erroRank"></p>
+                    </div>
+                    
+                </div>
+
+                <div class="concordo">
+                    <input type="checkbox">
+                    <label for="">Concordo com as diretrizes de Konohagakure.</label>
+                </div>                                   
+                
+                <input type="submit" id="submit" value="CONFIRMAR">
+
+            </form>
+
+        </div>
+
+    </main>
+    
+    <script src="js/registraCard.js"></script>
+</body>
+</html>
