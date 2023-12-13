@@ -19,23 +19,30 @@ window.addEventListener("load", async () => {
     await getAllCharacters();
 });
 
-const formulario = document.getElementById("formulario");
+const formularioCard = document.getElementById("formulario");
 const nameInput = document.getElementById("nome");
 const rankInput = document.getElementById("rank");
 
-formulario.addEventListener("submit", (event) => {
+formularioCard.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const name = nameInput.value.trim();
     const imageUrl = "../img/manny.png";
     const rank = rankInput.value.trim();
 
-    // if (!name || !rank) {
-    //     console.error("Nome e classificação são obrigatórios.");
-    //     return;
-    // }
+    if (!name) {
+        var erroNome = document.getElementById("erroNome");
+        erroNome.textContent = "Nome inválido!";
+        console.error("Nome é obrigatório!");
+        return;
+    }
 
-    mostrarMensagem();
+    if (!rank) {
+        var erroRank = document.getElementById("erroRank");
+        erroRank.textContent = "Rank inválido!";
+        console.error("Rank é obrigatório!");
+        return;
+    }
 
     const newCharacter = {
         id: generateUniqueId(),

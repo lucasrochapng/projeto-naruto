@@ -1,80 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="./img/logo-folha.png">
+        <link rel="icon" type="image/png" href="./img/logo-folha.png">
 
-    <title>Konohagakure</title>
+        <title>Konohagakure</title>
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/formulario.css">
-</head>
-<body>
-    <header class="header" id="header-form">
-        <div class="h-div1">
-            <img src="./img/logo-folha.png" alt="logo de konoha">
-            <h2>KONOHAGAKURE</h2>
-        </div>
-
-        <div class="h-div2">
-            <div class="menu-toggler">
-                <div class="hamburguer"></div>
-                <div class="hamburguer"></div>
-                <div class="hamburguer"></div>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/formulario.css">
+    </head>
+    <body>
+        <header class="header" id="header-form">
+            <div class="h-div1">
+                <img src="./img/logo-folha.png" alt="logo de konoha">
+                <h2>KONOHAGAKURE</h2>
             </div>
-            <nav class="menu">
-                <ul>
-                    <li><a href="index.html">INICIO</a></li>
-                    <li><a href="cadastroNinja.html">CADASTRAR NINJA</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-    </header>
 
-    <main class="secao-form">
+            <div class="h-div2">
+                <div class="menu-toggler">
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                    <div class="hamburguer"></div>
+                </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="cadastroNinja.html">CADASTRAR NINJA</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </header>
 
-        <div class="form-img">
-            <img src="./img/anbu.png" alt="">
-        </div>
+        <main class="secao-form">
 
-        <div class="form-text">
+            <div class="form-img">
+                <img src="./img/anbu.png" alt="">
+            </div>
 
-            <form class="formulario" id="formulario" method="post">
+            <div class="form-box">
+                <div class="form-text">
 
-                <h2>CADASTRAR NINJA</h2>
+                    <form class="formulario" id="formulario" method="post">
 
-                <div class="formulario-dados">
+                        <h2>CADASTRAR NINJA</h2>
 
-                    <div>
-                        <p>Nome</p>
-                        <input type="text" placeholder="Digite o nome do ninja" id="nome">
-                        <p id="erroNome"></p>
-                    </div>
+                        <div class="formulario-dados">
 
-                    <div>
-                        <p>Rank</p>
-                        <input type="text" placeholder="Digite o rank do ninja" id="rank">
-                        <p id="erroRank"></p>
-                    </div>
+                            <div>
+                                <p>Nome</p>
+                                <input type="text" placeholder="Digite o nome do ninja" id="nome">
+                                <p id="erroNome"></p>
+                            </div>
+
+                            <div>
+                                <p>Rank</p>
+                                <input type="text" placeholder="Digite o rank do ninja" id="rank">
+                                <p id="erroRank"></p>
+                            </div>
+                            
+                        </div>
+
+
+                            
+                        <div class="concordo">
+                            <input type="checkbox">
+                            <label for="">Concordo com as diretrizes de Konohagakure.</label>
+                        </div>                                   
+                        
+                        <input type="submit" id="submit" value="CONFIRMAR">
+                            
+                    </form>
                     
                 </div>
+            </div>
 
-                <div class="concordo">
-                    <input type="checkbox">
-                    <label for="">Concordo com as diretrizes de Konohagakure.</label>
-                </div>                                   
-                
-                <input type="submit" id="submit" value="CONFIRMAR">
+        </main>
 
-            </form>
+        <hr id="hr-main">
 
-        </div>
+        <footer class="footer">
 
-    </main>
-    
-    <script src="js/registraCard.js"></script>
-</body>
+            <div class="footer1">
+
+                <div class="div1">
+                    <img src="./img/logo-naruto.png" alt="logo de konoha">
+                    <p>Konoha é uma vila ninja próspera, onde habilidosos shinobis prestam serviços, protegendo e ajudando sua comunidade, enquanto aprimoram suas habilidades em artes marciais e ninjutsu</p>
+                </div>
+
+                <div class="div2">
+
+                    <div class="div2-2">
+                        <h2>Serviços</h2>
+                        <div class="links">
+                            <ul>
+                                <li><a href="">Proteção</a></li>
+                                <li><a href="">Assistência</a></li>
+                                <li><a href="">Exploração</a></li>
+                                <li><a href="">Segurança</a></li>
+                                <li><a href="">Investigação</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="div2-1">
+                        <h2>Links</h2>
+                        <div class="links">
+                            <ul>
+                                <li><a href="">Início</a></li>
+                                <li><a href="">Sobre Nós</a></li>
+                                <li><a href="">Serviços</a></li>
+                                <li><a href="">Segurança</a></li>
+                                <li><a href="">Privacidade</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="div2-3">
+                        <h2>Notícias</h2>
+                        
+                        <p>Se inscreva para receber notícias atualizadas sobre o mundo ninja diretamente em seu email pessoal</p>
+                        <div class="input">
+                            <input type="email" placeholder="Digite seu email" id="mensagemInput">
+                            <button onclick="limparEMostrarMensagem()">Inscreva-se</button>                            
+                        </div>
+                        <p id="mensagemParaUsuario"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="footer2">
+                <a href="">
+                    <img src="./img/whats.png" alt="whatsapp">
+                </a>
+                <a href="">
+                    <img src="./img/face.png" alt="facebook">
+                </a>
+                <a href="">
+                    <img src="./img/insta.png" alt="instagram">
+                </a>
+                <a href="">
+                    <img src="./img/x.png" alt="instagram">
+                </a>
+            </div>
+        </footer>
+        
+        <script src="js/script.js"></script>
+        <script src="js/formulario.js"></script>
+        <script src="js/registraCard.js"></script>
+    </body>
 </html>

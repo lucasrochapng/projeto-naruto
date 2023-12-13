@@ -48,12 +48,3 @@ formulario.addEventListener("submit", (event) => {
         console.log(adotante);
     } else event.preventDefault();
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    var divFormImg = document.querySelector(".form-img");
-    var imagem = divFormImg.querySelector("img");
-
-    if (divFormImg.offsetHeight > divFormImg.clientHeight) {
-        imagem.style.display = "none";
-    }
-});
