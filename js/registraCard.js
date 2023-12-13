@@ -26,6 +26,8 @@ const rankInput = document.getElementById("rank");
 formularioCard.addEventListener("submit", (event) => {
     event.preventDefault();
 
+    mostrarMensagem(nameInput.value, rankInput.value);
+
     const name = nameInput.value.trim();
     const imageUrl = "../img/manny.png";
     const rank = rankInput.value.trim();
@@ -74,21 +76,15 @@ function generateUniqueId() {
     return highestId + 1;
 }
 
-function mostrarMensagem() {
-    if (!name || typeof name.value !== 'string') {
-
+function mostrarMensagem(name, rank) {
+    if (!name || typeof name !== 'string') {
         var erroNome = document.getElementById("erroNome");
         erroNome.textContent = "Nome inválido!";
-        
         console.error("Nome é obrigatório!");
         return;
-    }
-
-    else if (!rank || typeof rank.value !== 'string') {
-
+    } else if (!rank || typeof rank !== 'string') {
         var erroRank = document.getElementById("erroRank");
         erroRank.textContent = "Rank inválido!";
-        
         console.error("Rank é obrigatório!");
         return;
     }
