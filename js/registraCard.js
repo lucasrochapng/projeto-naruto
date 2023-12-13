@@ -32,17 +32,10 @@ formularioCard.addEventListener("submit", (event) => {
     const imageUrl = "../img/manny.png";
     const rank = rankInput.value.trim();
 
-    if (!name) {
-        var erroNome = document.getElementById("erroNome");
-        erroNome.textContent = "Nome inválido!";
-        console.error("Nome é obrigatório!");
-        return;
-    }
+    var erroNome = document.getElementById("erroNome");
+    var erroRank = document.getElementById("erroRank");
 
-    if (!rank) {
-        var erroRank = document.getElementById("erroRank");
-        erroRank.textContent = "Rank inválido!";
-        console.error("Rank é obrigatório!");
+    if (erroNome.textContent != "" ||erroRank.textContent != ""){
         return;
     }
 
@@ -77,17 +70,21 @@ function generateUniqueId() {
 }
 
 function mostrarMensagem(name, rank) {
+    var erroNome = document.getElementById("erroNome");
+    var erroRank = document.getElementById("erroRank");
     if (!name || typeof name !== 'string') {
-        var erroNome = document.getElementById("erroNome");
         erroNome.textContent = "Nome inválido!";
         console.error("Nome é obrigatório!");
         return;
     } else if (!rank || typeof rank !== 'string') {
-        var erroRank = document.getElementById("erroRank");
         erroRank.textContent = "Rank inválido!";
+        erroNome.textContent ="";
         console.error("Rank é obrigatório!");
         return;
     }
+
+    erroNome.textContent ="";
+    erroRank.textContent ="";
 }
 
 const menuToggle = document.querySelector('.menu-toggler');

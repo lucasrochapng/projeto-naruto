@@ -1,35 +1,42 @@
-let formulario = document.querySelector("form");
+const formulario = document.querySelector("form");
 
 formulario.addEventListener("submit", (event) => {
     event.preventDefault();
 
     const validarDados = (nome, recompensa, servico, descricao) => {
-
         let control = true;
 
-        if(nome.value.trim() == ""){
+        if (nome.value.trim() === "") {
             nome.style.backgroundColor = "red";
             control = false;
+        } else {
+            nome.style.backgroundColor = "";
         }
 
-        if(recompensa.value.trim() == ""){
+        if (recompensa.value.trim() === "") {
             recompensa.style.backgroundColor = "red";
             control = false;
+        } else {
+            recompensa.style.backgroundColor = "";
         }
 
-        if(servico == null) {
+        if (servico === null) {
             let elementoErro = document.querySelector("#erro-servico");
             elementoErro.classList.add("msg-erro--active");
             control = false;
+        } else {
+            let elementoErro = document.querySelector("#erro-servico");
+            elementoErro.classList.remove("msg-erro--active");
         }
 
-        if(descricao.value.trim() == ""){
+        if (descricao.value.trim() === "") {
             descricao.style.backgroundColor = "red";
             control = false;
+        } else {
+            descricao.style.backgroundColor = "";
         }
 
         return control;
-
     };
 
     let nome = document.querySelector("#nome");
@@ -37,15 +44,15 @@ formulario.addEventListener("submit", (event) => {
     let servico = document.querySelector("input[name='servico']:checked");
     let descricao = document.querySelector("#descricao");
 
-    if(validarDados(nome, recompensa, servico, descricao)) {
-        let adotante = {
-            nome : nome.value.trim(),
-            recompensa : recompensa.value.trim(),
-            servico : servico.value,
-            descricao : descricao.value.trim(),
-            id : "1",
+    if (validarDados(nome, recompensa, servico, descricao)) {
+        let contrato = {
+            nome: nome.value.trim(),
+            recompensa: recompensa.value.trim(),
+            servico: servico.value,
+            descricao: descricao.value.trim(),
+            id: "1",
         };
-        console.log(adotante);
+        console.log(contrato);
     } else event.preventDefault();
 });
 
