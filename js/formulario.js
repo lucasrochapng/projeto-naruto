@@ -48,3 +48,22 @@ formulario.addEventListener("submit", (event) => {
         console.log(adotante);
     } else event.preventDefault();
 });
+
+const menuToggle = document.querySelector('.menu-toggler');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', function () {
+    menu.classList.toggle('active');
+});
+
+const menuToggler = document.querySelector('.menu-toggler');
+let corAtiva = false;
+
+menuToggler.addEventListener('click', function () {
+    if (corAtiva) {
+        menuToggler.style.backgroundColor = '';
+    } else {
+        menuToggler.style.backgroundColor = 'rgba(241,113,8,1)';
+    }
+    corAtiva = !corAtiva;
+});
