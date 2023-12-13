@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: end;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     min-height: 90vh;
     flex-wrap: wrap;
@@ -24,6 +24,15 @@
 
 .form-img img {
     width: 20rem;
+}
+
+#naruto-img{
+    width: auto;
+}
+
+#naruto-img img{
+    width: 100%;
+    max-width: 23rem;
 }
 
 .form-text {
@@ -208,24 +217,45 @@ input[type="radio"]:hover {
 
     .form-text{
         width: 100%;
+        align-items: start;
     }
 
     .formulario{
-        width: 80%;
+        width: 100%;
+    }
+
+    .formulario h2{
+        text-align: center;
     }
 
     .concordo{
         align-items: center;
         justify-content: start;
-    }
-
-    .concordo{
         width: auto;
+        gap: 5px;
     }
 
-    .formulario div, .formulario h2, .formulario input{
+    #descricao{
+        width: 100%;
+    }
+    
+    #submit{
+        height: fit-content;
+        width: 100%;
+        white-space: normal;
+    }
+
+    .formulario-dados, .formulario h2, .formulario input{
         height: auto;
         width: fit-content;
+    }
+
+    .formulario-dados{
+        width: 100%;
+    }
+
+    .formulario-dados div input{
+        width: 100%;
     }
 }
 
@@ -242,8 +272,22 @@ input[type="radio"]:hover {
     .form-box{
         margin: 3rem 0;
         height: auto;
-        width: fit-content;
-        background-color: rgb(255, 255, 255);
+        width: 70%;
+    }
+
+    .ranks{
+        width: 100%;
+        text-align: center;
+    }
+
+    .formulario-radios{
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .ranks hr{
+        width: 100%;
     }
 
     .secao-form{
